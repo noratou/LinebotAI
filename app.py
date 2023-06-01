@@ -65,7 +65,8 @@ def callback():
             continue
         if not isinstance(event.message, TextMessage):
             continue
-         """image='https://a001.wzu.edu.tw/datas/upload/Pictures/wzlogo_2020.png'    
+         """
+        image='https://a001.wzu.edu.tw/datas/upload/Pictures/wzlogo_2020.png'    
         line_bot_api.reply_message(
             event.reply_token,
             ImageSendMessage(
