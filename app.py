@@ -77,8 +77,8 @@ def callback():
        
         result=pn.read( event.message.text)
         line_bot_api.reply_message(
-                    event.reply_token,
-                    TextSendMessage(text=result)
+            event.reply_token,
+            TextSendMessage(text=result)
         )
 
     return 'OK'
