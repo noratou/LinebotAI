@@ -39,6 +39,7 @@ def read(word):
     example_sentences_ch = bs.find_all('div', class_='sen-ch')
   
     result=[]
+    
     if translation :
         trans = translation.text
         trans = translate_to_traditionalch(trans)
