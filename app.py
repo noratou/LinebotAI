@@ -17,6 +17,7 @@ import os
 import sys
 from argparse import ArgumentParser
 import phonetic as pn
+import opencc
 
 from flask import Flask, request, abort
 from linebot import (
