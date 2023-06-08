@@ -22,7 +22,7 @@ import requests
 from bs4 import BeautifulSoup
 from opencc import OpenCC
 
-#簡中轉為繁中
+#簡中轉繁中
 def translate_to_traditionalch(text):
     cc = OpenCC('s2tw')  
     return cc.convert(text)
@@ -57,7 +57,7 @@ def read(word):
         result.append("無音標資料")
               
     if len(example_sentences_en) > 0:
-        for i in range(min(2, len(example_sentences_en))): #min取最小值
+        for i in range(min(2, len(example_sentences_en))): #min取()最小值
             example = example_sentences_en[i].text
             example = translate_to_traditionalch(example)
             result.append(f"英文例句{i+1}：{example}")
@@ -66,8 +66,9 @@ def read(word):
             example_ch = translate_to_traditionalch(example_ch)
             result.append(f"例句中文{i+1}：{example_ch}")    
             
-            if i < len(example_sentences_en) - 1:
+            if i < len(example_sentences_en) - 1:  #讓例句間有空行
                 result.append("") 
     else:
         result.append("無例句資料")
-    return '\n'.join(result).strip()
+        
+    return '\n'.join(result).strip() #將上面要回傳的資料連接成新的字串
