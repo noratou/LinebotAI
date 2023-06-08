@@ -66,7 +66,7 @@ def read(word):
             example_ch = translate_to_traditionalch(example_ch)
             result.append(f"例句中文{i+1}：{example_ch}")    
             
-            if i == 0:  #讓例句間有空
+            if i == 0:  #讓例句間有空行
                 result.append(" ") 
     else:
         result.append("無例句資料")
