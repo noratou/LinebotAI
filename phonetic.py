@@ -71,4 +71,4 @@ def read(word):
     else:
         result.append("無例句資料")
         
-    return '\n'.join(result).strip() #將上面要回傳的資料連接成新的字串
+    return '\n'.join(result) #將上面要回傳的資料連接成新的字串
