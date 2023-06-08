@@ -66,4 +66,4 @@ def read(word):
             result.append(f"例句中文{i+1}：{example_ch}")
     else:
         result.append("無例句資料")
-    return '\n'.join(result)
+    return '\\n'.join(result)
