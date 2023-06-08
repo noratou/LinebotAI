@@ -70,4 +70,4 @@ def read(word):
                 result.append("") 
     else:
         result.append("無例句資料")
-    return '\n'.join(result)
+    return '\n'.join(result).strip()
