@@ -64,7 +64,10 @@ def read(word):
                      
             example_ch = example_sentences_ch[i].text
             example_ch = translate_to_traditionalch(example_ch)
-            result.append(f"例句中文{i+1}：{example_ch}")          
+            result.append(f"例句中文{i+1}：{example_ch}")    
+            
+            if i < len(example_sentences_en) - 1:
+                result.append("") 
     else:
         result.append("無例句資料")
     return '\n'.join(result)
