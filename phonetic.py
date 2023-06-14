@@ -40,20 +40,20 @@ def read(word):
   
     result=[]
     
-    if translation :
+    try :
         trans = translation.text
         trans = translate_to_traditionalch(trans)
         result.append(f"中文翻譯：{trans}")
         result.append(" ")
-    else:
+    except :
         result.append("無翻譯資料")
         
         
-    if phonetic :
+    try :
         pht = phonetic.text
         result.append(f"英文音標：{pht}")
         result.append(" ")
-    else:
+    except :
         result.append("無音標資料")
               
     if len(example_sentences_en) > 0:
